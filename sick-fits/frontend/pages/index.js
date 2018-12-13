@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
+import Items from "../components/Items"
 
 const Home = props => (
   <div>
-    <p>HEY!!!</p>
+    <Items page={parseFloat(props.query.page) || 1}/>
   </div>
 )
 

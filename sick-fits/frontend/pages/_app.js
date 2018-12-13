@@ -21,13 +21,13 @@ class MyApp extends App {
 
         return (
             <Container>
-                <ApolloProvider client={this.props.apollo} >
+                <ApolloProvider client={apollo} >
                     <Page />
-                    <Component />
+                    <Component {...pageProps}/>
                     </ApolloProvider>
             </Container>
             );
         }
     }
     
-export default MyApp;
+export default withData(MyApp);

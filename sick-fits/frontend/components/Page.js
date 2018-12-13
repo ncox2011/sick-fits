@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import styled, {ThemeProvider, injectGlobal} from 'styled-components';
 import Header from '../components/Header';
 import Meta from '../components/Meta';
-import styled, {ThemeProvider, injectGlobal} from 'styled-components';
 
 const theme = {
-    red: '#FF0000',
+  red: '#FF0000',
   black: '#393939',
   grey: '#3A3A3A',
   lightgrey: '#E1E1E1',
@@ -26,8 +26,7 @@ padding: 2rem;
 injectGlobal`
     @font-face {
         font-family: "radnika-next";
-        src: url("static/radnikanext-medium-webfont.woff2")
-        format('woff2');
+        src: url("static/radnikanext-medium-webfont.woff2") format('woff2');
         font-weight: normal;
         font-style: normal;
     }
@@ -49,6 +48,7 @@ injectGlobal`
         text-decoration: none;
         color: ${theme.black};
     }
+    button {font-family: 'radnika-next'}
 `;
 
 export default class Page extends Component {
