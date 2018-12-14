@@ -22,8 +22,9 @@ class MyApp extends App {
         return (
             <Container>
                 <ApolloProvider client={apollo} >
-                    <Page />
+                    <Page>
                     <Component {...pageProps}/>
+                    </Page>
                     </ApolloProvider>
             </Container>
             );
