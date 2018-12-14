@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 const Item = styled.div`
   background: white;
-  border: 1px solid #EDEDED;
-  box-shadow: '0 12px 24px 0 rgba(0, 0, 0, 0.09)';
-  position: relative;
+  border: 1px solid ${props => props.theme.offWhite};
+  box-shadow: ${props => props.theme.bs};
   display: flex;
   flex-direction: column;
   img {
@@ -23,10 +22,10 @@ const Item = styled.div`
   .buttonList {
     display: grid;
     width: 100%;
-    border-top: 1px solid #E1E1E1;
+    border-top: 1px solid ${props => props.theme.lightgrey};
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 1px;
-    background: #EDEDED};
+    background: ${props => props.theme.lightgrey};
     & > * {
       background: white;
       border: 0;
